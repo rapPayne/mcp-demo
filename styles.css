@@ -1,0 +1,134 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  /* Button theme tokens */
+  --btn-text: #ffffff;
+
+  --btn-main-bg: #1d4ed8;
+  --btn-main-hover: #1e40af;
+  --btn-main-ring: #93c5fd;
+
+  --btn-danger-bg: #dc2626;
+  --btn-danger-hover: #b91c1c;
+  --btn-danger-ring: #fca5a5;
+
+  --btn-warning-bg: #d97706;
+  --btn-warning-hover: #b45309;
+  --btn-warning-ring: #fcd34d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.container {
+  width: min(92vw, 480px);
+  background: var(--card);
+  border-radius: 14px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.button-row {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0.72rem 1rem;
+  min-width: 120px;
+  color: var(--btn-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2);
+  transition: background-color 0.2s ease, transform 0.12s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.24);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
+}
+
+.btn:focus-visible {
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+}
+
+.btn-main {
+  background: var(--btn-main-bg);
+}
+
+.btn-main:hover {
+  background: var(--btn-main-hover);
+}
+
+.btn-main:focus-visible {
+  outline-color: var(--btn-main-ring);
+}
+
+.btn-danger {
+  background: var(--btn-danger-bg);
+}
+
+.btn-danger:hover {
+  background: var(--btn-danger-hover);
+}
+
+.btn-danger:focus-visible {
+  outline-color: var(--btn-danger-ring);
+}
+
+.btn-warning {
+  background: var(--btn-warning-bg);
+}
+
+.btn-warning:hover {
+  background: var(--btn-warning-hover);
+}
+
+.btn-warning:focus-visible {
+  outline-color: var(--btn-warning-ring);
+}
+
+.message {
+  min-height: 1.5rem;
+  margin-top: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
